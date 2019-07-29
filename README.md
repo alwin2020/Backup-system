@@ -1,5 +1,5 @@
 # Backup-system
-Put the netsoft.py file to the python interpreter path, you can find the file through the code below:
+Put the netsoft.py file to the python interpreter path, you can find the path through the code below:
 ```
 import random
 print(random.__file__)
