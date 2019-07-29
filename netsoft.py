@@ -190,7 +190,6 @@ class Backup:
 
             with open(backup_log_path, 'w', encoding='utf-8') as file:
                 file.write(backup_log)
-
         except:
             backup_log = {}
             backup_log[self.today_date] = {}
@@ -233,51 +232,4 @@ def backup(backup_drive, backup_files, timestamp, working_day=5):
 
 
 if __name__ == '__main__':
-    # backup_drive = 'E'
-    # backup_files = {
-    #     'thbwebsite': [r'\\192.168.1.4\common_website\thbwebsite\tc\psp\pressreleases\transport\land\2019\index.htm',
-    #                    r'\\192.168.1.4\common_website\thbwebsite\tc\whatsnew\transport\index.htm'],
-    #     'hcv_2018': [r'\\192.168.1.4\common_website\hcv_2018\www\css\layout.css',
-    #                  r'\\192.168.1.4\common_website\hcv_2018\www\js\menu.js']
-    # }
-    # backup_files = [
-    #     r'\\192.168.1.4\common_website\thbwebsite\tc\psp\pressreleases\transport\land\2019\index.htm',
-    #     r'\\192.168.1.4\common_website\thbwebsite\tc\whatsnew\transport\index.htm',
-    #     r'\\192.168.1.4\common_website\hcv_2018\www\css\layout.css',
-    #     r'\\192.168.1.4\common_website\hcv_2018\www\js\menu.js'
-    # ]
-    # D:\Raymond\Python course\notes
-    # timestamp = ['1200', '1300', '1400', '1500', '1600', '1700', '1800', '1900']
-    # timestamp = ['1826','1827','1828','1829','1830','1831','1832','1833']
-    # timestamp = ['0030','0031','2326','2327']
-    # timestamp = ['0102','0103','0104','0105']
-
-
-    # timestamp = ['1023', '1024', '1025', '1026', '1027', '1028', '1029', '1030']
-    # backup(backup_drive, backup_files, timestamp)
-
-
-
-    # week = time.localtime().tm_wday
-    # weeks = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-    # print(weeks[week])
-
-    # time.struct_time(tm_year=2019, tm_mon=7, tm_mday=25, tm_hour=21, tm_min=15, tm_sec=3, tm_wday=3, tm_yday=206, tm_isdst=0)
-
-
-    # backup(backup_drive, timestamp=timestamp)
-
-    # with open(r'D:\Python projects\content_convert\lists\cpce\convert_path.txt', 'r', encoding='utf-8') as file:
-    # all_path = file.read().split('\n')
-    # o_path = r'E:\common_website\cpce_orig\main'
-    # t_path = r'E:\common_website\cpce\main'
-    # copy_files(all_path, o_path, t_path)
-
-    # delete all files (including tc_chi itself)
-    # from shutil import rmtree as remove_tree
-    # remove_tree(r'E:\common_website\AFCD\backup_20190708\tc_chi')
-
-    # from distutils.dir_util import copy_tree
-    # orig_path = r'E:\common_website\AFCD\backup_20190708_orig\tc_chi'
-    # target_path =r'E:\common_website\AFCD\backup_20190708\tc_chi'
-    # copy_tree(orig_path, target_path)
+    pass
