@@ -123,18 +123,14 @@ class Backup:
             else:
                 if time.localtime(time.time()+self.DAYSEC).tm_wday < working_day:
                     timestamp_difference.sort(reverse=True)
-                    timestamp.sort(reverse=True)
                     backup_time = timestamp[0]
                     sleep_time = abs(timestamp_difference_orig[0])+(self.DAYSEC-(time.localtime().tm_hour*60*60+time.localtime().tm_min*60+time.localtime().tm_sec))
                     timestamp_difference.sort()
-                    timestamp.sort()
                 else:
                     timestamp_difference.sort(reverse=True)
-                    timestamp.sort(reverse=True)
                     backup_time = timestamp[0]
                     sleep_time = abs(timestamp_difference_orig[0])+(self.DAYSEC-(time.localtime().tm_hour*60*60+time.localtime().tm_min*60+time.localtime().tm_sec))+((7-working_day)*self.DAYSEC)
                     timestamp_difference.sort()
-                    timestamp.sort()
         else:
             backup_time = timestamp[0]
             sleep_time = abs(timestamp_difference_orig[0])+(self.DAYSEC-(time.localtime().tm_hour*60*60+time.localtime().tm_min*60+time.localtime().tm_sec))+((6-time.localtime(time.time()).tm_wday)*self.DAYSEC)
